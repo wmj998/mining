@@ -4,7 +4,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 catering_sale = 'D:/文件丶/数据分析与挖掘实战/chapter3/data/catering_fish_congee.xls'  # 餐饮数据
-data = pd.read_excel(catering_sale,names=['date','sale'])  # 读取数据，指定“日期”列为索引
+data = pd.read_excel(catering_sale,header = None,names=['date','sale'])  # 读取数据，指定“日期”列为索引
 
 bins = [0,500,1000,1500,2000,2500,3000,3500,4000]
 data['sale分层'] = pd.cut(data.sale, bins)
