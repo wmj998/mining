@@ -39,6 +39,13 @@ with open("../tmp/tree.dot", 'w') as f:
     export_graphviz(dtc, feature_names=x.columns, out_file=f)
     f.close()
 
+# from sklearn import tree
+# import graphviz
+# dtc_data = tree.export_graphviz(dtc, out_file=None)
+# graph = graphviz.Source(dtc_data)
+# graph.render("../tree")
+
+
 '''
 from IPython.display import Image  
 from sklearn import tree
