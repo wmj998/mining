@@ -1,4 +1,4 @@
-# neural_network
+# neural_network 使用神经网络算法预测销量高低
 
 import pandas as pd
 # 参数初始化
@@ -33,4 +33,3 @@ yp = model.predict_classes(x).reshape(len(y))  # 分类预测
 
 from cm_plot import *  # 导入自行编写的混淆矩阵可视化函数
 cm_plot(y,yp).show()  # 显示混淆矩阵可视化结果
-
