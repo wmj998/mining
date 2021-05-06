@@ -1,4 +1,4 @@
-# decision_tree
+# decision_tree 使用ID3决策树算法预测销量高低
 
 import pandas as pd
 
@@ -43,7 +43,7 @@ with open("../tmp/tree.dot", 'w') as f:
 # import graphviz
 # dtc_data = tree.export_graphviz(dtc, out_file=None)
 # graph = graphviz.Source(dtc_data)
-# graph.render("../tree")
+# graph.render("../tmp/tree_")
 
 
 '''
@@ -59,4 +59,12 @@ dot_data = tree.export_graphviz(dtc, out_file=None,  #regr_1 是对应分类器
 graph = pydotplus.graph_from_dot_data(dot_data)  
 graph.write_png('../tmp/example.png')    #保存图像
 Image(graph.create_png()) 
+'''
+
+'''
+digraph Tree {
+edge [fontname="SimHei"];
+node [fontname="SimHei"];
+
+dot -Tpdf tree.dot -o tree.pdf
 '''
