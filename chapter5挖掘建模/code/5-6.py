@@ -1,10 +1,11 @@
-# tsne降维并展示聚类结果
+# tsne 用TSNE进行数据降维并展示聚类结果
+
 import pandas as pd
 from sklearn.manifold import TSNE
 # 参数初始化
 inputfile = '../data/consumption_data.xls'  # 销量及其他属性数据
 inputfile1 = '../tmp/data_type.xls'
-data = pd.read_excel(inputfile, index_col = 'Id')  # 读取数据
+data = pd.read_excel(inputfile, index_col='Id')  # 读取数据
 data_zs = 1.0*(data - data.mean())/data.std()
 r = pd.read_excel(inputfile1,index_col='Id')
 
