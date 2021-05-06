@@ -1,18 +1,18 @@
 #-*- coding: utf-8 -*-
 def cm_plot(y, yp):
   
-  from sklearn.metrics import confusion_matrix #µ¼Èë»ìÏý¾ØÕóº¯Êý
+  from sklearn.metrics import confusion_matrix #ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
-  cm = confusion_matrix(y, yp) #»ìÏý¾ØÕó
+  cm = confusion_matrix(y, yp) #ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
   
-  import matplotlib.pyplot as plt #µ¼Èë×÷Í¼¿â
-  plt.matshow(cm, cmap=plt.cm.Greens) #»­»ìÏý¾ØÕóÍ¼£¬ÅäÉ«·ç¸ñÊ¹ÓÃcm.Greens£¬¸ü¶à·ç¸ñÇë²Î¿¼¹ÙÍø¡£
-  plt.colorbar() #ÑÕÉ«±êÇ©
+  import matplotlib.pyplot as plt #ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¼ï¿½ï¿½
+  plt.matshow(cm, cmap=plt.cm.Greens) #ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¼ï¿½ï¿½ï¿½ï¿½É«ï¿½ï¿½ï¿½Ê¹ï¿½ï¿½cm.Greensï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+  plt.colorbar() #ï¿½ï¿½É«ï¿½ï¿½Ç©
   
-  for x in range(len(cm)): #Êý¾Ý±êÇ©
+  for x in range(len(cm)): #ï¿½ï¿½ï¿½Ý±ï¿½Ç©
     for y in range(len(cm)):
       plt.annotate(cm[x,y], xy=(x, y), horizontalalignment='center', verticalalignment='center')
   
-  plt.ylabel('True label') #×ø±êÖá±êÇ©
-  plt.xlabel('Predicted label') #×ø±êÖá±êÇ©
+  plt.ylabel('True label') #ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç©
+  plt.xlabel('Predicted label') #ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç©
   return plt
