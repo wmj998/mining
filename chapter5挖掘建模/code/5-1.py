@@ -1,4 +1,4 @@
-# logistic_regression
+# logistic_regression 逻辑回归
 
 import pandas as pd
 from sklearn.linear_model import LogisticRegression as LR
