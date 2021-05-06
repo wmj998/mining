@@ -1,4 +1,5 @@
-# k_means
+# k_means 使用K-Means算法聚类消费行为特征数据
+
 import pandas as pd
 # 参数初始化
 inputfile = '../data/consumption_data.xls'  # 销量及其他属性数据
