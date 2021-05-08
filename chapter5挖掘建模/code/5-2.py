@@ -63,8 +63,8 @@ Image(graph.create_png())
 
 '''
 digraph Tree {
-edge [fontname="SimHei"];
-node [fontname="SimHei"];
+edge [fontname="SimHei"] ;
+node [fontname="SimHei"] ;
 
 dot -Tpdf tree.dot -o tree.pdf
 '''
