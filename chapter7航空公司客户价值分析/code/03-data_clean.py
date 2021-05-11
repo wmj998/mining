@@ -13,7 +13,7 @@ airline_data = pd.read_csv(datafile, encoding='utf-8')
 print('原始数据的形状为：', airline_data.shape)
 
 # 去除票价为空的记录
-airline_notnull = airline_data.loc[airline_data['SUM_YR_1'].notnull() & 
+airline_notnull = airline_data.loc[airline_data['SUM_YR_1'].notnull() &
                                    airline_data['SUM_YR_2'].notnull(), :]
 print('删除缺失记录后数据的形状为：', airline_notnull.shape)
 
