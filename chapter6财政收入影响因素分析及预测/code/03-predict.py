@@ -46,7 +46,7 @@ y_train = data_train['y'].values  # 标签数据
 linearsvr = LinearSVR()  # 调用LinearSVR()函数
 linearsvr.fit(x_train, y_train)
 x = ((data[feature] - data_mean[feature]) / data_std[feature]).values  # 预测，并还原结果。
-data[u'y_pred'] = linearsvr.predict(x) * data_std['y'] + data_mean['y']
+data['y_pred'] = linearsvr.predict(x) * data_std['y'] + data_mean['y']
 outputfile = '../tmp/new_reg_data_GM11_revenue.xls'  # SVR预测后保存的结果
 data.to_excel(outputfile)
 
