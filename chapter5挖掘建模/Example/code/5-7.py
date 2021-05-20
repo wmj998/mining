@@ -6,10 +6,10 @@ from apriori import *  # 导入自行编写的apriori函数
 
 inputfile = '../data/menu_orders.xls'
 outputfile = '../tmp/apriori_rules.xls'  # 结果文件
-data = pd.read_excel(inputfile, header = None)
+data = pd.read_excel(inputfile, header=None)
 
 print('\n转换原始数据至0-1矩阵...')
-ct = lambda x: pd.Series(1, index = x[pd.notnull(x)])  # 转换0-1矩阵的过渡函数
+ct = lambda x: pd.Series(1, index=x[pd.notnull(x)])  # 转换0-1矩阵的过渡函数
 b = map(ct, data.values)  # 用map方式执行
 data = pd.DataFrame(list(b)).fillna(0)  # 实现矩阵转换，空值用0填充
 print('\n转换完毕。')
