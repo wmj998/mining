@@ -3,7 +3,7 @@
 import numpy as np
 from sklearn.decomposition import PCA
 
-D = np.random.rand(10,4)
+D = np.random.rand(10, 4)
 
 pca = PCA()
 pca.fit(D)

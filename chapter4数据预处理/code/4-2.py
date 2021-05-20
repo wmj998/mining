@@ -2,8 +2,9 @@
 
 import pandas as pd
 import numpy as np
-datafile = 'D:/文件丶/数据分析与挖掘实战/chapter4/demo/data/normalization_data.xls'  # 参数初始化
-data = pd.read_excel(datafile, header = None)  # 读取数据
+
+datafile = '../data/normalization_data.xls'  # 参数初始化
+data = pd.read_excel(datafile, header=None)  # 读取数据
 
 print((data - data.min()) / (data.max() - data.min()))  # 最小-最大规范化
 print('----------------------------------------------')

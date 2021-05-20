@@ -2,6 +2,7 @@
 
 import pandas as pd
 import numpy as np
+
 D = pd.Series([1, 1, 2, 3, 5])
 
 D_1 = D.unique()

@@ -3,7 +3,7 @@
 import pandas as pd
 import numpy as np
 
-datafile = 'D:/文件丶/数据分析与挖掘实战/chapter4/demo/data/discretization_data.xls'  # 参数初始化
+datafile = '../data/discretization_data.xls'  # 参数初始化
 data = pd.read_excel(datafile)  # 读取数据
 data = data['肝气郁结证型系数']
 k = 4

@@ -1,11 +1,11 @@
 import pandas as pd  # 导入数据分析库Pandas
 from scipy.interpolate import lagrange  # 导入拉格朗日插值函数
 
-inputfile = 'D:/文件丶/数据分析与挖掘实战/chapter4数据预处理/demo/data/catering_sale.xls'  # 销量数据路径
-outputfile = 'D:/文件丶/数据分析与挖掘实战/chapter4数据预处理/demo/sales.xls'  # 输出数据路径
+inputfile = '../data/catering_sale.xls'  # 销量数据路径
+outputfile = '../tmp/sales.xls'  # 输出数据路径
 
 data = pd.read_excel(inputfile)  # 读入数据
-data['销量'][(data['销量'] < 400) | (data['销量'] > 5000)] = None  # 过滤异常值，将其变为空值
+data[(data['销量'] < 400) | (data['销量'] > 5000)] = None  # 过滤异常值，将其变为空值
 # 自定义列向量插值函数
 # s为列向量，n为被插值的位置，k为取前后的数据个数，默认为5
 def ployinterp_column(s, n, k=5):
