@@ -2,6 +2,7 @@
 
 import numpy as np
 import pandas as pd
+
 D = pd.DataFrame(np.random.randn(6, 5))  # 产生6×5随机矩阵
 print(D.skew())  # 计算偏度
 print(D.kurt())  # 计算峰度

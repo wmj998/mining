@@ -12,5 +12,5 @@ error = np.random.randn(10)  # 定义误差列
 y = pd.Series(np.sin(np.arange(10)))  # 均值数据列
 print(error)
 print(y)
-y.plot(yerr = error)  # 绘制误差图
+y.plot(yerr=error)  # 绘制误差图
 plt.show()
