@@ -15,12 +15,12 @@ import matplotlib.pyplot as plt
 plt.rcParams['font.sans-serif'] = ['SimHei']  # 用来正常显示中文标签
 plt.rcParams['axes.unicode_minus'] = False  # 用来正常显示负号
 data.plot()
-plt.show()
 
 # 自相关图
 from statsmodels.graphics.tsaplots import plot_acf
 
 plot_acf(data).show()
+plt.show()
 
 # 平稳性检测
 from statsmodels.tsa.stattools import adfuller as ADF
@@ -32,11 +32,11 @@ print('原始序列的ADF检验结果为：', ADF(data['销量']))
 D_data = data.diff().dropna()
 D_data.columns = ['销量差分']
 D_data.plot()  # 时序图
-plt.show()
 plot_acf(D_data).show()  # 自相关图
 from statsmodels.graphics.tsaplots import plot_pacf
 
 plot_pacf(D_data).show()  # 偏自相关图
+plt.show()
 print('差分序列的ADF检验结果为：', ADF(D_data['销量差分']))  # 平稳性检测
 
 # 白噪声检验
