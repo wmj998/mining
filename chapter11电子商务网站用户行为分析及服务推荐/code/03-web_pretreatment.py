@@ -138,4 +138,4 @@ for i in Res.index:
             Res.loc[i, 'T/F'] = False
 
 # 保存推荐结果
-Res.to_csv('./tmp/Res.csv', index=False, encoding='utf8')
+Res.to_csv('./tmp/Res.csv', index=False, encoding='gbk')
